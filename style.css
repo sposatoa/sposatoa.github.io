@@ -1,3 +1,7 @@
+body {
+    background-color: #faf0e6;
+}
+
 div {
     display: flex;
 }
@@ -5,28 +9,30 @@ div {
 h1 {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
+    font-size: 40px;
 }
 
-th,
 td {
-    text-align: center;
-    border: 1px solid #000000;
-    width: 50%;
+    font-size: x-large;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-table {
-    table-layout: fixed;
+header {
+    margin-left: 100px;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    cursor: pointer;
 }
 
 p,
 ul,
 hr {
     margin: 0;
-}
-
-video {
-    display: block;
-    margin: auto;
 }
 
 .bulletpoint {
@@ -37,28 +43,82 @@ video {
     margin-left: auto;
 }
 
-.middle_alignment {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-style: italic;
+.profileimg {
+    max-width: 600px;
+    padding: 30px;
+    background: #faf0e6;
+    display: flex;
+
+    img {
+        width: 600px;
+        border-radius: 50%;
+        border: 4px solid #000000;
+    }
+}
+
+.biographydiv {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.biographytext {
     text-align: center;
-}
-
-.table_width {
-    border: 2px solid #000000;
-}
-
-#table {
-    border-collapse: collapse;
-    margin-left: auto;
-    margin-right: auto;
+    font-size: 25px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    font-style: italic;
+}
+
+.nametoptext {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 75px;
+}
+
+.toptext {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+}
+
+.headertext {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.text_alignment {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.portfolio_carousel {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid #000000;
+}
+
+.portfolio_carousel img {
+    width: 100%;
+    display: none;
+}
+
+.portfolio_carousel img.active {
+    display: block;
+}
+
+.previous_image {
+    left: 10px;
+}
+
+.next_image {
+    right: 10px;
 }
 
 #content_style {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-style: italic;
+    font-size: 25px;
 }
