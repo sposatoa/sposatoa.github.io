@@ -1,12 +1,6 @@
 <!DOCTYPE htmL>
 <html lang="en">
 
-<!--
-SA: I Aidan Sposato, 400478607 certify that this material is my original work.
-No other person's work has been used without due acknowledgement.
-I have not made my work available to anyone else.
--->
-
 <head>
     <link rel="stylesheet" href="style.css">
     <title> Aidan Sposato Assignment #1</title>
@@ -16,10 +10,36 @@ I have not made my work available to anyone else.
 </head>
 
 <body>
-    <!--To Do: Biography-->
-    <!--To Do: Education-->
-    <h1> Education </h1>
-    <hr>
+    <!--Profile Section-->
+    <div>
+        <div>
+            <div class="profileimg">
+                <img src="profile.png" alt="profile" />
+            </div>
+        </div>
+        <div class="headertext">
+            <header>
+                <h1 class="nametoptext">Aidan Sposato</h1>
+                <p class="toptext">Software Developer | Machine Enthusiast</p>
+            </header>
+        </div>
+    </div> <br>
+
+    <!--Biography Section-->
+    <div class="biographydiv">
+        <p class="biographytext">
+            My name is Aidan Sposato, and I currently am Automation Systems Technology Student with experience involving
+            manufacturing, developing, and coding processes. Through my co-op and work experiences within Liburdi
+            Automation and G&G Machine Knife, I've been able to develop skills in XAML/C++/C# programming, software development,
+            and producing engineering drawings. I've additionally been able to develop skills like problem-solving,
+            critical thinking,and technical skills throughout the completion of my degree. Outside of school and work, I
+            enjoy recreational basketball and Arduino building, which allows me to stay active while continuing to develop and explore
+            hands-on creativity in my daily life.
+        </p>
+    </div> <br>
+
+    <!--Education Section-->
+    <h1> Education </h1> <hr>
     <div>
         <p id="content_style">Automation Systems Engineering Technology</p>
         <p class="right_alignment" id="content_style">September 2022 - December 2026</p>
@@ -33,9 +53,8 @@ I have not made my work available to anyone else.
         </ul>
     </ul> <br>
 
-    <!--To Do: Work Experience/Co-op-->
-    <h1>Employment History </h1>
-    <hr>
+    <!--Work Experience & Co-op Section-->
+    <h1>Employment History </h1> <hr>
     <div>
         <p id="content_style">CNC Machine Operator</p>
         <p class="right_alignment" id="content_style">July 2018 - August 2018 / July 2019 - August 2019</p>
@@ -84,9 +103,8 @@ I have not made my work available to anyone else.
         <li>Updated software and tested on physical LAWS machines to ensure all bug fixes were completed correctly.</li>
     </ul> <br>
 
-    <!--To Do: Volunteer Experience-->
-    <h1>Vounteer History </h1>
-    <hr>
+    <!--Volunteer Experience Section-->
+    <h1>Vounteer History </h1> <hr>
     <div>
         <p id="content_style">Youth Flag Football Coach</p>
         <p class="right_alignment" id="content_style">June 2019 - August 2019</p>
@@ -111,14 +129,13 @@ I have not made my work available to anyone else.
         <li>Communicated with parents in a professional manner regarding times of games and practices.</li>
     </ul> <br>
 
-    <!--To Do: Project Highlighs-->
-    <h1>Project Highlighs </h1>
-    <hr>
+    <!--Project Highlights Section-->
+    <h1>Project Highlighs </h1> <hr>
     <div>
         <p id="content_style">Arduino Building & Coding Project</p>
         <p class="right_alignment" id="content_style">September 2021 - December 2021</p>
     </div>
-    <p>Grade Recieved: A</p>
+    <p>Grade Recieved: A+</p>
     <ul>
         <li>Designed and coded multiple Arduino mini-projects for daily use:</li>
         <ul class="bulletpoint">
@@ -140,9 +157,51 @@ I have not made my work available to anyone else.
         </ul>
     </ul> <br>
 
-    <h1>Project Portfolio </h1>
-    <hr> <br>
-    
-</body>
+    <h1> Portfolio </h1>
+    <hr>
+    <br>
+    <p class="text_alignment" id="content_style">
+        Below is a list of portfolio items ranging from past Arduino Projects and AutoCAD Designs
+        completed throughout University or Work/Co-op Experiences:
+    </p> <br>
+    <div class="portfolio_carousel">
+        <img class="active" src="image_1.jpg" alt="Image 1">
+        <img src="image_2.jpg" alt="Image 2">
+        <img src="image_3.jpg" alt="Image 2">
+        <img src="image_4.jpg" alt="Image 2">
+        <img src="image_5.jpg" alt="Image 2">
+        <img src="image_6.jpg" alt="Image 2">
+        <img src="image_7.jpg" alt="Image 2">
+        <img src="image_8.jpg" alt="Image 2">
+        <img src="image_9.jpg" alt="Image 2">
+        <img src="image_10.jpg" alt="Image 2">
 
+        <button class="previous_image">&#8592</button>
+        <button class="next_image">&#8594</button>
+    </div> <br>
+
+    <script>
+        let i = 0;
+        const imgs = document.querySelectorAll('.portfolio_carousel img');
+
+        document.querySelector('.next').onclick = () => {
+            imgs[i].classList.remove('active');
+            i = (i + 1) % imgs.length;
+            imgs[i].classList.add('active');
+        };
+
+        document.querySelector('.prev').onclick = () => {
+            imgs[i].classList.remove('active');
+            i = i === 0 ? imgs.length - 1 : i - 1;
+            imgs[i].classList.add('active');
+        };
+    </script>
+
+    <footer>
+        <p class="text_alignment">&copy; 2026 &#8226 Aidan Sposato
+            &#8226 <a href="mailto:sposatoa@mcmaster.ca">Contact Me</a></p>
+        </p>
+    </footer>
+
+</body>
 </html>
