@@ -184,13 +184,13 @@
         let i = 0;
         const imgs = document.querySelectorAll('.portfolio_carousel img');
 
-        document.querySelector('.next').onclick = () => {
+        document.querySelector('.next_image').onclick = () => {
             imgs[i].classList.remove('active');
             i = (i + 1) % imgs.length;
             imgs[i].classList.add('active');
         };
 
-        document.querySelector('.prev').onclick = () => {
+        document.querySelector('.prev_image').onclick = () => {
             imgs[i].classList.remove('active');
             i = i === 0 ? imgs.length - 1 : i - 1;
             imgs[i].classList.add('active');
